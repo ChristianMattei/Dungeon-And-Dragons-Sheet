@@ -1,0 +1,26 @@
+/* You can add global styles to this file, and also import other style files */
+@import "~bootstrap/dist/css/bootstrap.css";
+
+.contentComponent {
+    border-style: solid;
+    border-width: medium;
+    margin-top: 10px;
+    padding: 7px;
+}
+
+input::-webkit-outer-spin-button,
+      input::-webkit-inner-spin-button {
+          -webkit-appearance: none;
+          margin: 0;
+      }
+
+
+.textBold{
+    font-size: 11px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.centerDivContent {
+    text-align: center;
+}

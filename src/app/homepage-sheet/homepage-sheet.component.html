@@ -1,0 +1,62 @@
+<div class="characterCreator">
+  <div class="container">
+    <top-content></top-content>
+  </div>
+  <div class="container">
+    <div class="row">
+      <div class="col">
+        <div class="row">
+          <div class="col-3">
+            <stat-detail [statElements]="statList"
+              [(skillElements)]="skillList"
+              [proficiencyBonusUp]="proficiencyBonus">
+            </stat-detail>
+          </div>
+          <div class="col">
+            <div class="row" id="rowProficiencyBonus">
+              <div class="col-3">
+                <input class="statInput" 
+                  (input)="inputProficiencyBonus($event)"
+                  oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"
+                  type = "number"
+                  maxlength = "2"
+                  > 
+              </div>
+              <div class="col">
+                <p id="proficiencyBonus">PROFICIENCY BONUS</p>
+              </div>
+            </div>
+            <div>
+              <saving-throws [(statElements)]="statList" 
+                [proficiencyBonusUp]="proficiencyBonus">
+              </saving-throws>
+              <skill-detail 
+                [(skillElements)]="skillList"
+                [proficiencyBonusUp]="proficiencyBonus">
+              </skill-detail>
+            </div>
+          </div>
+        </div>
+
+       <div class="contentComponent">
+        PASSIVE WISDOM (PERCEPTION)
+       </div>
+       <div class="contentComponent">
+        <textarea name="description" minlength="10" maxlength="90" required></textarea>
+        <p class="textBold">OTHER PROFICIENCY & LANGUAGES</p>
+       </div>
+      </div>
+
+      <div class="col">
+        <other-characteristics-detail
+          [statElements]="statList">
+        </other-characteristics-detail>
+      </div>
+      
+      <div class="col">
+        colonna grande 3
+      </div>
+    </div>
+  </div>
+
+</div>

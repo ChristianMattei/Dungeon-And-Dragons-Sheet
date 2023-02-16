@@ -1,0 +1,15 @@
+<div class="contentComponent" *ngFor="let statE of statElements">
+  <div class="centerDivContent">
+    <p class="textBold">{{ statE.nameStat }}</p>
+    <div class="statContent">
+      <input class="statInput"
+        oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"
+        type = "number"
+        maxlength = "2"
+        (input)="checkInputText($event.target.value, statE)">
+      <div>
+        <p class="statMod">{{ statE.mod }}</p>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,21 @@
+<div class="contentComponent">
+  <div class="row"
+    *ngFor="let statElem of statElements">
+    <div class="col-2">
+      <input class="form-check-input" type="checkbox"
+        (change)="isChecked($event, statElem)">
+    </div>
+    <div class="col-2">
+      <p *ngIf="statElem.checked==false || statElem.checked==undefined">
+        {{statElem.mod }}
+      </p>
+      <p *ngIf="statElem.checked==true">
+        {{ statElem.modProficiencyBonus }}
+      </p>
+    </div>
+    <div class="col">
+      <p class="statText">{{ statElem.nameStat }}</p>
+    </div> 
+  </div>
+  <p class="textBold">SAVING THROWS</p>
+</div>

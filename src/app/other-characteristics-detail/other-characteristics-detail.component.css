@@ -1,0 +1,15 @@
+.characteristicInput {
+    width: 35px;
+    margin: 5px;
+}
+
+.characteristicContainer {
+    border-style: solid;
+    border-width: medium;
+    margin: 2px;
+    text-align: center;
+}
+
+.form-check {
+    margin-right: 0;
+}
