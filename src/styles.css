@@ -16,9 +16,10 @@ input::-webkit-outer-spin-button,
 
 
 .textBold{
-    font-size: 11px;
+    font-size: 12px;
     font-weight: bold;
     text-align: center;
+    margin-bottom: 5px;
 }
 
 .centerDivContent {

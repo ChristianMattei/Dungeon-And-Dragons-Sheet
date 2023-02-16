@@ -27,7 +27,7 @@
               </div>
             </div>
             <div>
-              <saving-throws [(statElements)]="statList" 
+              <saving-throws [statElements]="statList" 
                 [proficiencyBonusUp]="proficiencyBonus">
               </saving-throws>
               <skill-detail 
@@ -42,7 +42,7 @@
         PASSIVE WISDOM (PERCEPTION)
        </div>
        <div class="contentComponent">
-        <textarea name="description" minlength="10" maxlength="90" required></textarea>
+        <textarea class="form-control" id="exampleFormControlTextarea1" rows="4"></textarea>
         <p class="textBold">OTHER PROFICIENCY & LANGUAGES</p>
        </div>
       </div>
@@ -51,6 +51,8 @@
         <other-characteristics-detail
           [statElements]="statList">
         </other-characteristics-detail>
+
+        <attacks-spellcasting></attacks-spellcasting>
       </div>
       
       <div class="col">

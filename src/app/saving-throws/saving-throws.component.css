@@ -18,3 +18,7 @@ input::-webkit-outer-spin-button,
 .statText {
   font-size: 12px;
 }
+
+.row {
+  margin-bottom: -12px;
+}

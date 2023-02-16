@@ -1,0 +1,26 @@
+<div class="contentComponent">
+  <div class="row">
+    <div class="col">
+      <p>NAME</p>
+    </div>
+    <div class="col">
+      <p>ATK BONUS</p>
+    </div>
+    <div class="col">
+      <p>DAMAGE/TYPE</p>
+    </div>
+  </div>
+
+  <div class="row" *ngFor="let equipment of equipments">
+    <div class="col">
+      {{equipment.name}}
+    </div>
+    <div class="col">
+    </div>
+    <div class="col">
+    </div>
+  </div>
+  
+  <textarea class="form-control" id="exampleFormControlTextarea1" rows="6"></textarea>
+  <p class="textBold">ATTACKS & SPELLCASTING</p>
+</div>

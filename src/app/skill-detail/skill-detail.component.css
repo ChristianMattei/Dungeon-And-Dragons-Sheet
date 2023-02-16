@@ -1,17 +1,21 @@
 .statContent {
-    margin: auto;
-    width: 30%;
-    text-align: center;
+  margin: auto;
+  width: 30%;
+  text-align: center;
 }
 
 .statInput {
-width: 30px;
+  width: 30px;
 }
 
 .statMod {
-margin-top: 10px;
+  margin-top: 10px;
 }
 
 .statText {
   font-size: 12px;
+}
+
+.row {
+  margin-bottom: -12px;
 }

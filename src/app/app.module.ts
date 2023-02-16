@@ -10,6 +10,7 @@ import { SkillDetailComponent } from './skill-detail/skill-detail.component';
 import { OtherCharacteristicsDetailComponent } from './other-characteristics-detail/other-characteristics-detail.component';
 import { TopContentComponent } from './top-content/top-content.component';
 import { DataServiceService } from './services/data-service.service';
+import { AttacksSpellcastingComponent } from './attacks-spellcasting/attacks-spellcasting.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { DataServiceService } from './services/data-service.service';
     SavingThrowsComponent,
     SkillDetailComponent,
     OtherCharacteristicsDetailComponent,
-    TopContentComponent
+    TopContentComponent,
+    AttacksSpellcastingComponent
   ],
   imports: [
     BrowserModule,

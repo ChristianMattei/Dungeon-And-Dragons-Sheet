@@ -8,8 +8,6 @@
 
 .statInput {
   width: 30px;
-  margin-left: 5px;
-  margin-right: 5px;
 }
 
 input::-webkit-outer-spin-button,
@@ -17,12 +15,6 @@ input::-webkit-outer-spin-button,
           -webkit-appearance: none;
           margin: 0;
       }
-
-.statContent {
-  margin: auto;
-  width: 30%;
-  text-align: center;
-}
 
 .statText {
   font-size: 11px;
@@ -32,4 +24,9 @@ input::-webkit-outer-spin-button,
 
 .statMod {
   margin-top: 10px;
+  margin-bottom: 0px;
+}
+
+.statContent {
+  margin-top: 15px;
 }
