@@ -1,9 +1,9 @@
 <div class="contentComponent">
   <div class="row">
-    <div class="col">
+    <div class="col-5">
       <p>NAME</p>
     </div>
-    <div class="col">
+    <div class="col-2">
       <p>ATK BONUS</p>
     </div>
     <div class="col">
@@ -11,16 +11,54 @@
     </div>
   </div>
 
-  <div class="row" *ngFor="let equipment of equipments">
-    <div class="col">
-      {{equipment.name}}
+  <div class="row" *ngFor="let weapon of weaponList">
+    <div class="col-5" >
+      <select class="form-select" (input)="onSelect($event, weapon.row)"
+        aria-label="Default select example">
+        <option selected>None</option>
+        <option *ngFor="let equipment of weaponsFiltered">
+          {{equipment.name}}
+        </option>
+      </select>
+    </div>
+    <div class="col-2">
+      {{weapon.atkBonus}}
     </div>
     <div class="col">
-    </div>
-    <div class="col">
+      {{weapon.damageType}}
     </div>
   </div>
-  
+
+  <div class="row">
+    <div class="col-5">
+      <p>NAME</p>
+    </div>
+    <div class="col-2">
+      <p>AC</p>
+    </div>
+    <div class="col">
+      <p>DESCRIPTION</p>
+    </div>
+  </div>
+
+  <div class="row" *ngFor="let armor of armorList">
+    <div class="col-5" >
+      <select class="form-select" (input)="onSelect($event, armor.row)"
+        aria-label="Default select example">
+        <option selected>None</option>
+        <option *ngFor="let equipment of armorsFiltered">
+          {{equipment.name}}
+        </option>
+      </select>
+    </div>
+    <div class="col-2">
+      {{armor.classArmor}}
+    </div>
+    <div class="col">
+      {{armor.description}}
+    </div>
+  </div>
+
   <textarea class="form-control" id="exampleFormControlTextarea1" rows="6"></textarea>
   <p class="textBold">ATTACKS & SPELLCASTING</p>
 </div>

@@ -7,6 +7,7 @@ import { Stat } from '../model/stat';
 })
 
 export class UtilsService {
+    proficiencyBonus: number;
 
     sumNumbers(a: number, b: number) {
         return + a + + b;
@@ -40,5 +41,13 @@ export class UtilsService {
       });
       return skillList;
   }
-    
+
+  updateProficiencyBonus(profBonus) {
+    this.proficiencyBonus = profBonus;
+    console.log("ProficiencyBonus updated",this.proficiencyBonus)
+  }
+  
+  getProficiencyBonus() {
+    return !!this.proficiencyBonus ? this.proficiencyBonus : 0;
+  }
 }

@@ -1,4 +1,5 @@
 import { Injectable } from '@angular/core';
+import { Equipment } from '../model/equipment';
 import { Skill } from '../model/skill';
 import { Stat } from '../model/stat';
 
@@ -46,4 +47,16 @@ export class DataServiceService {
 
     return skillList;
   }
+
+  getEquipment() {
+    let equipmentList: Equipment[] = [
+      {name:'Greatsword', type:'Weapon', description:'Heavy, two-handed, slashing', attackDice:'2d6', bonusStat: 'Strength'},
+      {name:'Scale Mail', type:'Armor', description:'Disadvantage on stealth', classArmor: 14, statModifier: 2, bonusStat: 'Dexterity'},
+      {name:'Rapier', type:'Weapon', description:'Finesse, piercing', attackDice:'1d8', bonusStat: 'Dexterity'},
+      {name:'Leather', type:'Armor', description:'', classArmor: 11, bonusStat: 'Dexterity'},
+    ];
+
+    return equipmentList;
+  }
+
 }

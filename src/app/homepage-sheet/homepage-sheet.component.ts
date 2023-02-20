@@ -60,16 +60,8 @@ export class HomepageSheetComponent implements OnInit {
 
     this.statList = this.utils.updateStatModProficiencyBonus(this.statList, this.proficiencyBonus.bonus);
     this.skillList = this.utils.updateSkillModProficiencyBonus(this.skillList, this.proficiencyBonus.bonus);
+    this.utils.updateProficiencyBonus(this.proficiencyBonus.bonus);
   }
 
-  /*
-  updateModProficiencyBonus() {
-    this.statList.forEach(element => {
-      //if(this.proficiencyBonus.bonus>0 || this.proficiencyBonus.bonus<0)
-      if(!!element.checked) {
-        element.modProficiencyBonus = 0;
-        element.modProficiencyBonus = this.utils.sumNumbers(element.mod, this.proficiencyBonus.bonus);
-      }
-    });
-  }*/
+
 }
