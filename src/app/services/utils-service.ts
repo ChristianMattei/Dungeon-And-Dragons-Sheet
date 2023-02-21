@@ -26,10 +26,9 @@ export class UtilsService {
 
     updateSkillModProficiencyBonus(skillList: Skill[], proficiencyBonus: number, mod?: number) {
       skillList.forEach(element => {
-        //if(this.proficiencyBonus.bonus>0 || this.proficiencyBonus.bonus<0)
         if(!!element.stat.checked) {
           element.stat.modProficiencyBonus = 0;
-          console.log('PRIMA sett, pass mod ', mod, 'mod corrente: ', element.stat.mod)
+          //console.log('PRIMA sett, pass mod ', mod, 'mod corrente: ', element.stat.mod)
           if(!!mod) {//stat-detail
             element.stat.modProficiencyBonus = this.sumNumbers(mod, proficiencyBonus);
           }

@@ -11,21 +11,25 @@
     </div>
   </div>
 
-  <div class="row" *ngFor="let weapon of weaponList">
-    <div class="col-5" >
+  <div class="row" *ngFor="let weapon of weaponList; index as w">
+    <div class="col-6" >
       <select class="form-select" (input)="onSelect($event, weapon.row)"
         aria-label="Default select example">
-        <option selected>None</option>
+        <option selected>No weapon</option>
         <option *ngFor="let equipment of weaponsFiltered">
           {{equipment.name}}
         </option>
       </select>
     </div>
-    <div class="col-2">
-      {{weapon.atkBonus}}
+    <div class="col-1">
+      <div *ngIf="weapon.hideRow !== true">
+        {{weapon.atkBonus}}
+      </div>
     </div>
     <div class="col">
-      {{weapon.damageType}}
+      <div *ngIf="weapon.hideRow !== true">
+        {{weapon.damageType}}
+      </div>
     </div>
   </div>
 
@@ -42,20 +46,24 @@
   </div>
 
   <div class="row" *ngFor="let armor of armorList">
-    <div class="col-5" >
+    <div class="col-6" >
       <select class="form-select" (input)="onSelect($event, armor.row)"
         aria-label="Default select example">
-        <option selected>None</option>
+        <option selected>No armor</option>
         <option *ngFor="let equipment of armorsFiltered">
           {{equipment.name}}
         </option>
       </select>
     </div>
-    <div class="col-2">
-      {{armor.classArmor}}
+    <div class="col-1">
+      <div *ngIf="armor.hideRow !== true">
+        {{armor.classArmorWithBonusDex}}
+      </div>
     </div>
     <div class="col">
-      {{armor.description}}
+      <div *ngIf="armor.hideRow !== true">
+        {{armor.description}}
+      </div>
     </div>
   </div>
 

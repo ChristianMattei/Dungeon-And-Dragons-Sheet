@@ -19,7 +19,7 @@ export class HomepageSheetComponent implements OnInit {
   statList: Stat[] = [];
   skillList: Skill[] = [];
 
-  proficiencyBonus: ProficiencyBonus = {bonus: 0, update: false};
+  proficiencyBonus: ProficiencyBonus = {bonus: 0, update: false, changed: false};
 
   constructor(private utils: UtilsService, private dataServices: DataServiceService) {
   
@@ -43,16 +43,19 @@ export class HomepageSheetComponent implements OnInit {
         });
       });
     }
-    console.log("addStatOnSkill ", this.skillList);
+    //console.log("addStatOnSkill ", this.skillList);
   }
 
   inputProficiencyBonus(eventInputText: any) {
     if(!!eventInputText.target.value) {
+      (eventInputText.target.value > 0 || eventInputText.target.value < 0) ? 
+        this.proficiencyBonus.changed = true : this.proficiencyBonus.changed = false;
       this.proficiencyBonus.update = true;
       this.proficiencyBonus.bonus = eventInputText.target.value;
     }
     else {
       this.proficiencyBonus.update = false;
+      this.proficiencyBonus.changed = false;
       this.proficiencyBonus.bonus = 0;
     }
     
