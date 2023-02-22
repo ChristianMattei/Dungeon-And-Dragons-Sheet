@@ -11,6 +11,7 @@ import { OtherCharacteristicsDetailComponent } from './other-characteristics-det
 import { TopContentComponent } from './top-content/top-content.component';
 import { DataServiceService } from './services/data-service.service';
 import { AttacksSpellcastingComponent } from './attacks-spellcasting/attacks-spellcasting.component';
+import { GenericTextBoxComponent } from './generic-text-box/generic-text-box.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { AttacksSpellcastingComponent } from './attacks-spellcasting/attacks-spe
     SkillDetailComponent,
     OtherCharacteristicsDetailComponent,
     TopContentComponent,
-    AttacksSpellcastingComponent
+    AttacksSpellcastingComponent,
+    GenericTextBoxComponent
   ],
   imports: [
     BrowserModule,

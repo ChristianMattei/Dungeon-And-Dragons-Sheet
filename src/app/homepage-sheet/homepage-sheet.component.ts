@@ -20,6 +20,14 @@ export class HomepageSheetComponent implements OnInit {
   skillList: Skill[] = [];
 
   proficiencyBonus: ProficiencyBonus = {bonus: 0, update: false, changed: false};
+  textBoxDetail: any[] = [
+    {subTitle: "OTHER PROFICIENCY & LANGUAGES", rows: "4"},
+    {subTitle: "PERSONALITY TRAITS", rows: "4"},
+    {subTitle: "IDEALS", rows: "3"},
+    {subTitle: "BONDS", rows: "3"},
+    {subTitle: "FLAWS", rows: "3"},
+    {subTitle: "FEATURES & TRAITS", rows: "20"}
+  ];
 
   constructor(private utils: UtilsService, private dataServices: DataServiceService) {
   

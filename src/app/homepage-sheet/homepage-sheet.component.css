@@ -9,8 +9,11 @@ input::-webkit-outer-spin-button,
     }
 
 #proficiencyBonus {
-    font-size: 11px;
     margin-top: 2px;
+    font-size: 12px;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 5px;
 }
 
 #rowProficiencyBonus {

@@ -38,13 +38,12 @@
           </div>
         </div>
 
-       <div class="contentComponent">
-        PASSIVE WISDOM (PERCEPTION)
-       </div>
-       <div class="contentComponent">
-        <textarea class="form-control" id="exampleFormControlTextarea1" rows="4"></textarea>
-        <p class="textBold">OTHER PROFICIENCY & LANGUAGES</p>
-       </div>
+        <div class="contentComponent">
+          PASSIVE WISDOM (PERCEPTION)
+        </div>
+        <generic-text-box
+          [textBoxDetail]="textBoxDetail[0]">
+        </generic-text-box>
       </div>
 
       <div class="col">
@@ -59,7 +58,25 @@
       </div>
       
       <div class="col">
-        colonna grande 3
+        <generic-text-box
+          [textBoxDetail]="textBoxDetail[1]">
+        </generic-text-box>
+
+        <generic-text-box
+          [textBoxDetail]="textBoxDetail[2]">
+        </generic-text-box>
+
+        <generic-text-box
+          [textBoxDetail]="textBoxDetail[3]">
+        </generic-text-box>
+
+        <generic-text-box
+          [textBoxDetail]="textBoxDetail[4]">
+        </generic-text-box>
+
+        <generic-text-box
+          [textBoxDetail]="textBoxDetail[5]">
+        </generic-text-box>
       </div>
     </div>
   </div>

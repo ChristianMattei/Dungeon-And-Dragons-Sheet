@@ -1,4 +1,3 @@
-import { NgForOf } from '@angular/common';
 import { Component, Input, OnInit } from '@angular/core';
 import { Equipment } from '../model/equipment';
 import { ProficiencyBonus } from '../model/proficiencyBonus';
@@ -34,7 +33,7 @@ export class AttacksSpellcastingComponent implements OnInit {
 
   ngOnInit() {
     this.equipmentList = this.dataServices.getEquipment();
-    this.filterEquipmentByType()
+    this.filterEquipmentByType();
   }
 
   ngDoCheck() {
@@ -87,6 +86,7 @@ export class AttacksSpellcastingComponent implements OnInit {
     this.statElements.forEach(element => {
       if(element.nameStat === stat && !!element.mod) {
         mod = element.mod;
+        console.log("mod: ", mod," ",element.nameStat);
       }
     });
 
@@ -118,7 +118,7 @@ export class AttacksSpellcastingComponent implements OnInit {
 
   updateFilteredEquipmentList() {
     this.weaponList.forEach(weapon => {
-      if(!!weapon.bonusStat && !!weapon.atkBonus && !!this.proficiencyBonusUp.changed) {
+      if(!!weapon.bonusStat) {
         weapon.atkBonus = this.utils.sumNumbers(this.getStatMod(weapon.bonusStat), this.utils.getProficiencyBonus());
       }
     });
